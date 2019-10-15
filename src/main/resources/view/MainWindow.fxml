@@ -22,12 +22,12 @@
                     <VBox minWidth="300" prefWidth="300" styleClass="container">
                         <StackPane fx:id="commandBoxPlaceholder"/>
 
-                        <VBox fx:id="personList" VBox.vgrow="ALWAYS">
+                        <VBox fx:id="eateryList" VBox.vgrow="ALWAYS">
                             <padding>
                                 <Insets top="10"/>
                             </padding>
 
-                            <StackPane fx:id="personListPanelPlaceholder" VBox.vgrow="ALWAYS"/>
+                            <StackPane fx:id="eateryListPanelPlaceholder" VBox.vgrow="ALWAYS"/>
                         </VBox>
                     </VBox>
                 </left>
@@ -39,7 +39,7 @@
                 <right>
                     <VBox minWidth="300" prefWidth="300" styleClass="container">
                         <StackPane styleClass="plain-border-box" VBox.vgrow="ALWAYS">
-                            <Label>news feed</Label>
+                            <Label>News Feed</Label>
                         </StackPane>
                     </VBox>
                 </right>

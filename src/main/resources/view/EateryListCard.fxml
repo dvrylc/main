@@ -8,5 +8,6 @@
     <Label fx:id="id"/>
     <Label fx:id="name" text="\$first" wrapText="true"/>
     <Label fx:id="address" text="\$address" wrapText="true"/>
+    <Label fx:id="category" text="\$category" wrapText="true"/>
     <FlowPane fx:id="tags"/>
 </VBox>

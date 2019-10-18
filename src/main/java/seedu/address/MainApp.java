@@ -81,7 +81,7 @@ public class MainApp extends Application {
      */
     private Model initModelManager(Storage storage, ReadOnlyUserPrefs userPrefs) {
         Optional<ReadOnlyAddressBook> addressBookOptional;
-        ReadOnlyAddressBook initialData;
+        ReadOnlyAddressBook initialAddressBook;
         Optional<ReadOnlyFeedList> feedListOptional;
         ReadOnlyFeedList initialFeedList;
 
@@ -90,7 +90,7 @@ public class MainApp extends Application {
             if (!addressBookOptional.isPresent()) {
                 logger.info("Data file not found. Will be starting with a sample AddressBook");
             }
-            initialData = addressBookOptional.orElseGet(SampleDataUtil::getSampleAddressBook);
+            initialAddressBook = addressBookOptional.orElseGet(SampleDataUtil::getSampleAddressBook);
 
             feedListOptional = storage.readFeedList();
             if (!feedListOptional.isPresent()) {
@@ -101,17 +101,17 @@ public class MainApp extends Application {
             logger.warning("Data file not in the correct format. "
                     + "Will be starting with an empty AddressBook and FeedList");
 
-            initialData = new AddressBook();
+            initialAddressBook = new AddressBook();
             initialFeedList = new FeedList();
         } catch (IOException e) {
             logger.warning("Problem while reading from the file. "
                     + "Will be starting with an empty AddressBook and FeedList");
 
-            initialData = new AddressBook();
+            initialAddressBook = new AddressBook();
             initialFeedList = new FeedList();
         }
 
-        return new ModelManager(initialData, initialFeedList, userPrefs);
+        return new ModelManager(initialAddressBook, initialFeedList, userPrefs);
     }
 
     private void initLogging(Config config) {

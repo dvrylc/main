@@ -54,7 +54,7 @@ public class Feed {
                 if (buffer1.contains("<title>")) {
                     buffer2 = in.readLine();
 
-                    if (buffer1.contains("<title>") && buffer2.contains("<link>")) {
+                    if (buffer2.contains("<link>")) {
                         title = Jsoup.parse(buffer1).text()
                                 .replace("<title>", "").replace("</title>", "").strip();
                         link = Jsoup.parse(buffer2).text()

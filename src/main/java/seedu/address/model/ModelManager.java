@@ -170,6 +170,11 @@ public class ModelManager implements Model {
         addressBook.toggle();
     }
 
+    @Override
+    public boolean isMainMode() {
+        return addressBook.isMainMode();
+    }
+
     //=========== FeedList ================================================================================
 
     @Override
@@ -206,11 +211,6 @@ public class ModelManager implements Model {
     }
 
     //=========== Utilities ================================================================================
-
-    @Override
-    public boolean isMainMode() {
-        return addressBook.isMainMode();
-    }
 
     @Override
     public boolean equals(Object obj) {

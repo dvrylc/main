@@ -14,6 +14,7 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Region;
 import seedu.address.commons.core.LogsCenter;
+import seedu.address.logic.Logic;
 import seedu.address.model.ReadOnlyFeedList;
 import seedu.address.model.feed.Feed;
 import seedu.address.model.feed.FeedPost;
@@ -24,12 +25,14 @@ import seedu.address.model.feed.FeedPost;
 public class FeedPostListPanel extends UiPart<Region> {
     private static final String FXML = "FeedPostListPanel.fxml";
     private final Logger logger = LogsCenter.getLogger(FeedPostListPanel.class);
+    private Logic logic;
 
     @FXML
     private ListView<FeedPost> feedPostListView;
 
-    public FeedPostListPanel(ReadOnlyFeedList feedList) {
+    public FeedPostListPanel(ReadOnlyFeedList feedList, Logic logic) {
         super(FXML);
+        this.logic = logic;
 
         ObservableList<FeedPost> feedPostList = FXCollections.observableArrayList();
         feedPostListView.setItems(feedPostList);
@@ -73,6 +76,8 @@ public class FeedPostListPanel extends UiPart<Region> {
         Runnable feedPostFetch = () -> {
             for (Feed feed : feedList) {
                 ObservableList<FeedPost> feedPosts = feed.fetchPosts();
+                this.logic.saveFeedList();
+
                 Platform.runLater(() -> {
                     feedPostList.addAll(feedPosts);
                 });

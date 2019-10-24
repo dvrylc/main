@@ -15,15 +15,18 @@ class JsonAdaptedFeed {
 
     private final String name;
     private final String address;
+    private final String data;
 
     /**
      * Constructs a {@code JsonAdaptedFeed} with the given feed details.
      */
     @JsonCreator
     public JsonAdaptedFeed(@JsonProperty("name") String name,
-                           @JsonProperty("address") String address) {
+                           @JsonProperty("address") String address,
+                           @JsonProperty("data") String data) {
         this.name = name;
         this.address = address;
+        this.data = data;
     }
 
     /**
@@ -32,6 +35,7 @@ class JsonAdaptedFeed {
     public JsonAdaptedFeed(Feed source) {
         name = source.getName();
         address = source.getAddress();
+        data = source.getData();
     }
 
     /**
@@ -46,8 +50,11 @@ class JsonAdaptedFeed {
         if (address == null) {
             throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT, "address"));
         }
+        if (data == null) {
+            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT, "data"));
+        }
 
-        return new Feed(name, address);
+        return new Feed(name, address, data);
     }
 
 }

@@ -146,7 +146,6 @@ public class Feed {
             LogsCenter.getLogger(Feed.class).info(
                     String.format("[Feed: %s] Successfully parsed feed posts and updated local cache", name));
         } catch (Exception e) {
-            e.printStackTrace();
             LogsCenter.getLogger(Feed.class).warning(
                     String.format("[Feed: %s] Failed to parse feed posts", name));
         }

@@ -2,6 +2,7 @@ package seedu.address.ui;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
@@ -75,7 +76,7 @@ public class FeedPostListPanel extends UiPart<Region> {
     private void fetchPosts(ObservableList<FeedPost> feedPostList, List<Feed> feedList) {
         Runnable feedPostFetch = () -> {
             for (Feed feed : feedList) {
-                ObservableList<FeedPost> feedPosts = feed.fetchPosts();
+                Set<FeedPost> feedPosts = feed.fetchPosts();
                 this.logic.saveFeedList();
 
                 Platform.runLater(() -> {

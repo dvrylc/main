@@ -1,10 +1,14 @@
 package seedu.address.storage;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.feed.Feed;
+import seedu.address.model.feed.FeedPost;
 
 /**
  * Jackson-friendly version of {@link Feed}.
@@ -15,7 +19,7 @@ class JsonAdaptedFeed {
 
     private final String name;
     private final String address;
-    private final String data;
+    private final Set<FeedPost> posts = new HashSet<>();
 
     /**
      * Constructs a {@code JsonAdaptedFeed} with the given feed details.
@@ -23,10 +27,10 @@ class JsonAdaptedFeed {
     @JsonCreator
     public JsonAdaptedFeed(@JsonProperty("name") String name,
                            @JsonProperty("address") String address,
-                           @JsonProperty("data") String data) {
+                           @JsonProperty("posts") Set<FeedPost> posts) {
         this.name = name;
         this.address = address;
-        this.data = data;
+        this.posts.addAll(posts);
     }
 
     /**
@@ -35,7 +39,7 @@ class JsonAdaptedFeed {
     public JsonAdaptedFeed(Feed source) {
         name = source.getName();
         address = source.getAddress();
-        data = source.getData();
+        this.posts.addAll(source.getPosts());
     }
 
     /**
@@ -50,11 +54,8 @@ class JsonAdaptedFeed {
         if (address == null) {
             throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT, "address"));
         }
-        if (data == null) {
-            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT, "data"));
-        }
 
-        return new Feed(name, address, data);
+        return new Feed(name, address, posts);
     }
 
 }

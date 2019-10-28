@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
-import static seedu.address.testutil.TypicalEateries.getTypicalAddressBook;
+import static seedu.address.testutil.TypicalEateries.getTypicalOpenAddressBook;
 import static seedu.address.testutil.TypicalFeeds.getTypicalFeedList;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_EATERY;
 import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_EATERY;
@@ -23,7 +23,7 @@ import seedu.address.model.eatery.Eatery;
  */
 public class ShowCommandTest {
 
-    private Model model = new ModelManager(getTypicalAddressBook(), getTypicalFeedList(), new UserPrefs());
+    private Model model = new ModelManager(getTypicalOpenAddressBook(), getTypicalFeedList(), new UserPrefs());
 
     @Test
     public void execute_validIndex_success() {

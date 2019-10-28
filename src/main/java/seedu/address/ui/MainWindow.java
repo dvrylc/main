@@ -80,7 +80,7 @@ public class MainWindow extends UiPart<Stage> {
         eateryListPanel = new EateryListPanel(logic.getFilteredEateryList());
         eateryListPanelPlaceholder.getChildren().add(eateryListPanel.getRoot());
 
-        feedPostListPanel = new FeedPostListPanel(logic.getFeedList());
+        feedPostListPanel = new FeedPostListPanel(logic.getFeedList(), logic);
         feedPostListPanelPlaceholder.getChildren().add(feedPostListPanel.getRoot());
 
         resultDisplay = new ResultDisplay();

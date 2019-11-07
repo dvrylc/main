@@ -67,12 +67,8 @@ public class ResultDisplay extends UiPart<Region> {
 
         if (eateryToShow != null) {
             // Basic info
-            if (eateryToShow.getIsOpen()) {
-                eateryName.setText(eateryToShow.getName().fullName);
-            } else {
-                eateryName.setText(String.format("✘ %s ✘", eateryToShow.getName().fullName));
-                eateryName.setStyle("-fx-background-color: rgba(218, 88, 65, 0.25);");
-            }
+            eateryName.setText(eateryToShow.getIsOpen()
+                    ? eateryToShow.getName().fullName : String.format("%s [closed]", eateryToShow.getName().fullName));
             eateryCategory.setText(eateryToShow.getCategory().getName());
             eateryAddress.setText(eateryToShow.getAddress().value);
 
@@ -106,7 +102,6 @@ public class ResultDisplay extends UiPart<Region> {
         commandFeedback.setText("");
 
         eateryName.setText("");
-        eateryName.setStyle("-fx-background-color: transparent;");
         eateryCategory.setText("");
         eateryAddress.setText("");
         eateryTags.getChildren().clear();

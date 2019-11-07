@@ -31,6 +31,11 @@ Label, TextField {
     -fx-font: normal 13 sans-serif;
 }
 
+.hyperlink:hover,
+.hyperlink:visited {
+    -fx-underline: false;
+}
+
 FlowPane > Label {
     -fx-text-fill: #424242;
 }

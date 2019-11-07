@@ -34,17 +34,17 @@ public class EateryAttributesContainsKeywordsPredicate implements Predicate<Eate
 
     @Override
     public boolean test(Eatery eatery) {
-        boolean nameMatch = nameKeywords.isEmpty() || nameKeywords.stream()
-                .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(eatery.getName().fullName, keyword));
-        boolean addressMatch = addressKeywords.isEmpty() || addressKeywords.stream()
+        boolean nameMatch = !nameKeywords.isEmpty() && nameKeywords.stream()
+                .anyMatch(keyword -> StringUtil.containsStringIgnoreCase(eatery.getName().fullName, keyword));
+        boolean addressMatch = !addressKeywords.isEmpty() && addressKeywords.stream()
                 .anyMatch(keyword -> StringUtil.containsStringIgnoreCase(eatery.getAddress().value, keyword));
-        boolean categoryMatch = categoryKeywords.isEmpty() || categoryKeywords.stream()
+        boolean categoryMatch = !categoryKeywords.isEmpty() && categoryKeywords.stream()
                 .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(eatery.getCategory().getName(), keyword));
-        boolean tagMatch = tagKeywords.isEmpty() || tagKeywords.stream()
+        boolean tagMatch = !tagKeywords.isEmpty() && tagKeywords.stream()
                 .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(
                         eatery.getTags().stream().map(Tag::getName).collect(Collectors.joining(" ")), keyword));
 
-        return nameMatch && addressMatch && categoryMatch && tagMatch;
+        return nameMatch || addressMatch || categoryMatch || tagMatch;
     }
 
     @Override

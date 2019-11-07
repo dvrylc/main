@@ -56,13 +56,13 @@ public class FindCommandTest {
     }
 
     @Test
-    public void execute_zeroKeywords_allEateriesFound() {
-        String expectedMessage = String.format(MESSAGE_EATERIES_LISTED_OVERVIEW, 7);
+    public void execute_zeroKeywords_noEateryFound() {
+        String expectedMessage = String.format(MESSAGE_EATERIES_LISTED_OVERVIEW, 0);
         EateryAttributesContainsKeywordsPredicate predicate = preparePredicate(" ");
         FindCommand command = new FindCommand(predicate);
         expectedModel.updateFilteredEateryList(predicate);
         assertCommandSuccess(command, model, expectedMessage, expectedModel);
-        assertEquals(expectedModel.getFilteredEateryList(), model.getFilteredEateryList());
+        assertEquals(Collections.emptyList(), model.getFilteredEateryList());
     }
 
     @Test

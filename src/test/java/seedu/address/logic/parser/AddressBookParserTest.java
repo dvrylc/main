@@ -13,6 +13,8 @@ import static seedu.address.testutil.Assert.assertThrows;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_EATERY;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
@@ -96,10 +98,11 @@ public class AddressBookParserTest {
 
     @Test
     public void parseCommand_find() throws Exception {
-        String keywords = "foo bar baz";
-        FindCommand command = (FindCommand) parser.parseCommand(
-                FindCommand.COMMAND_WORD + " " + PREFIX_NAME + " " + keywords, true);
-        assertEquals(new FindCommand(new EateryAttributesContainsKeywordsPredicate(Arrays.asList(keywords))), command);
+        List<String> keywords = Arrays.asList("foo", "bar", "baz");
+        FindCommand command = (FindCommand) parser.parseCommand(FindCommand.COMMAND_WORD + " "
+                + keywords.stream().map(k -> String.format("%s %s", PREFIX_NAME, k))
+                .collect(Collectors.joining(" ")), true);
+        assertEquals(new FindCommand(new EateryAttributesContainsKeywordsPredicate(keywords)), command);
     }
 
     @Test

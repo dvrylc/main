@@ -250,6 +250,7 @@ Examples:
 Shows a completely random restaurant -- Useful in case you cannot decide what to eat! +
 Format: `random`
 
+// tag::show[]
 ===== Viewing an eatery: `show`
 
 Shows an eatery with all its details - address, category, tags, reviews, and a map of its location.
@@ -265,6 +266,7 @@ Format: `show [index]`
 Examples:
 
 * `show 2`
+// end::show[]
 
 ===== Deleting an eatery: `delete`
 
@@ -386,6 +388,7 @@ Format: `delete [index]`
 Examples:
 * `delete 1`
 
+// tag::newsfeed[]
 === News Feed
 
 EatMe allows you to stay up-to-date with the latest food trends from right within the app!
@@ -429,6 +432,7 @@ Format: `deletefeed \n [name of feed]`
 Examples:
 
 * `deletefeed \n Eatbook`
+// end::newsfeed[]
 
 == Quick Reference
 

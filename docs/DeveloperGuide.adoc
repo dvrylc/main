@@ -312,7 +312,7 @@ image::ModeCommandActivity.png[]
 ** Cons: More effort required for maintenance purposes. Need to make sure that data from main list should not go into todo list, and vice versa
 //end::modeCommand[]
 
-// tag::newsFeedFeature
+// tag::newsFeedFeature[]
 === News Feed Feature
 As people who really love food, we are interested in keeping up-to-date with the latest food trends and newest eateries to try.
 The news feed allows the user to save their favorite food blogs to EatMe and have access to the latest food-related articles right from within the app.
@@ -379,7 +379,7 @@ image::DeleteFeedSequenceDiagram.png[]
 * Alternative 2: Show an error message when offline.
 ** Pros: Small and simple feed list JSON file.
 ** Cons: Unable to view feed posts when offline.
-// end::newsFeedFeature
+// end::newsFeedFeature[]
 
 //tag::saveTodoCommand[]
 === Saving Todo Eatery feature

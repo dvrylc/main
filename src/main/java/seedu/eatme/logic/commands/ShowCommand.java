@@ -13,7 +13,7 @@ import seedu.eatme.model.eatery.Eatery;
 import seedu.eatme.model.eatery.Review;
 
 /**
- * Shows a eatery identified using it's displayed index from the address book.
+ * Shows a eatery identified using it's displayed index from the eatery list.
  */
 public class ShowCommand extends Command {
 

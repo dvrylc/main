@@ -52,7 +52,7 @@ public class AddTagCommandTest {
     public void execute_invalidEateryIndexFilteredList_failure() {
         showEateryAtIndex(model, INDEX_FIRST_EATERY);
         Index outOfBoundIndex = INDEX_SECOND_EATERY;
-        // ensures that outOfBoundIndex is still in bounds of address book list
+        // ensures that outOfBoundIndex is still in bounds of eatery list
         assertTrue(outOfBoundIndex.getZeroBased() < model.getEateryList().getEateryList().size());
 
         AddTagCommand addTagCommand = new AddTagCommand(outOfBoundIndex, new EditEateryDescriptor());

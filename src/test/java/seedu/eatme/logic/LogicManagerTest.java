@@ -45,7 +45,7 @@ public class LogicManagerTest {
     @BeforeEach
     public void setUp() {
         JsonEateryListStorage eateryListStorage =
-                new JsonEateryListStorage(temporaryFolder.resolve("eaterylist.json"));
+                new JsonEateryListStorage(temporaryFolder.resolve("eatMe.json"));
         JsonUserPrefsStorage userPrefsStorage = new JsonUserPrefsStorage(temporaryFolder.resolve("userPrefs.json"));
         JsonFeedListStorage feedListStorage =
                 new JsonFeedListStorage(temporaryFolder.resolve("feedList.json"));
@@ -75,7 +75,7 @@ public class LogicManagerTest {
     public void execute_storageThrowsIoException_throwsCommandException() {
         // Setup LogicManager with JsonEateryListIoExceptionThrowingStub
         JsonEateryListStorage eateryListStorage =
-                new JsonEateryListIoExceptionThrowingStub(temporaryFolder.resolve("ioException.json"));
+                new JsonEateryListIoExceptionThrowingStub(temporaryFolder.resolve("ioExceptionEatMe.json"));
         JsonUserPrefsStorage userPrefsStorage =
                 new JsonUserPrefsStorage(temporaryFolder.resolve("ioExceptionUserPrefs.json"));
         JsonFeedListStorage feedListStorage =

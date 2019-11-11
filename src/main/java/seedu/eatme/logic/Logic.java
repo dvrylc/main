@@ -49,7 +49,7 @@ public interface Logic {
     boolean isMainMode();
 
     /**
-     * Returns the user prefs' address book file path.
+     * Returns the user prefs' eatery list file path.
      */
     Path getEateryListFilePath();
 

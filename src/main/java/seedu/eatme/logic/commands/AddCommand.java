@@ -11,7 +11,7 @@ import seedu.eatme.model.Model;
 import seedu.eatme.model.eatery.Eatery;
 
 /**
- * Adds a eatery to the address book.
+ * Adds a eatery to the eatery list.
  */
 public class AddCommand extends Command {
 

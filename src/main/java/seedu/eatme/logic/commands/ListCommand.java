@@ -6,7 +6,7 @@ import static seedu.eatme.model.Model.PREDICATE_SHOW_ALL_EATERIES;
 import seedu.eatme.model.Model;
 
 /**
- * Lists all eateries in the address book to the user.
+ * Lists all eateries in the eatery list to the user.
  */
 public class ListCommand extends Command {
 

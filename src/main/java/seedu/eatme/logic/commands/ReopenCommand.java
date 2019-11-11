@@ -18,7 +18,7 @@ import seedu.eatme.model.eatery.Tag;
 
 
 /**
- * Sets the isOpen field of an existing eatery in the address book to true.
+ * Sets the isOpen field of an existing eatery in the eatery list to true.
  */
 public class ReopenCommand extends Command {
 

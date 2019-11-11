@@ -6,7 +6,7 @@ import seedu.eatme.model.EateryList;
 import seedu.eatme.model.Model;
 
 /**
- * Clears the address book.
+ * Clears the eatery list.
  */
 public class ClearCommand extends Command {
 

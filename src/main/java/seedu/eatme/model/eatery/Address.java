@@ -4,7 +4,7 @@ import static java.util.Objects.requireNonNull;
 import static seedu.eatme.commons.util.AppUtil.checkArgument;
 
 /**
- * Represents a Eatery's address in the address book.
+ * Represents a Eatery's address in the eatery list.
  * Guarantees: immutable; is valid as declared in {@link #isValidAddress(String)}
  */
 public class Address {

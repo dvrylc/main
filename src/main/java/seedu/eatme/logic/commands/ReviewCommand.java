@@ -17,7 +17,7 @@ import seedu.eatme.model.eatery.Eatery;
 import seedu.eatme.model.eatery.Review;
 
 /**
- * Adds review to an existing eatery in the address book
+ * Adds review to an existing eatery in the eatery list
  */
 public class ReviewCommand extends Command {
 

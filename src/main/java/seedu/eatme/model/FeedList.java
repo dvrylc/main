@@ -69,7 +69,7 @@ public class FeedList implements ReadOnlyFeedList {
 
     /**
      * Adds a feed to the feed list.
-     * The feed must not already exist in the address book.
+     * The feed must not already exist in the feed list.
      */
     public void addFeed(Feed p) {
         feeds.add(p);

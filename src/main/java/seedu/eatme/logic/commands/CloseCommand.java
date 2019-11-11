@@ -17,7 +17,7 @@ import seedu.eatme.model.eatery.Name;
 import seedu.eatme.model.eatery.Tag;
 
 /**
- * Sets the isOpen field of an existing eatery in the address book to false.
+ * Sets the isOpen field of an existing eatery in the eatery list to false.
  */
 public class CloseCommand extends Command {
 

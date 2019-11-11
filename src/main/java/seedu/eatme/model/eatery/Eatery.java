@@ -10,7 +10,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * Represents a Eatery in the address book.
+ * Represents a Eatery in the eatery list.
  * Guarantees: details are present and not null, field values are validated, immutable.
  */
 public class Eatery {

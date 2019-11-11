@@ -4,7 +4,7 @@ import javafx.collections.ObservableList;
 import seedu.eatme.model.eatery.Eatery;
 
 /**
- * Unmodifiable view of an address book
+ * Unmodifiable view of an eatery list
  */
 public interface ReadOnlyEateryList {
 

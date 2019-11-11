@@ -25,7 +25,7 @@ import seedu.eatme.model.eatery.Name;
 import seedu.eatme.model.eatery.Tag;
 
 /**
- * Edits the details of an existing eatery in the address book.
+ * Edits the details of an existing eatery in the eatery list.
  */
 public class EditCommand extends Command {
 

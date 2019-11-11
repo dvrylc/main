@@ -74,7 +74,7 @@ public class EditCommandTest {
     public void execute_duplicateEateryFilteredList_failure() {
         showEateryAtIndex(model, INDEX_FIRST_EATERY);
 
-        // edit eatery in filtered list into a duplicate in address book
+        // edit eatery in filtered list into a duplicate in eatery list
         Eatery eateryInList = model.getEateryList().getEateryList().get(INDEX_SECOND_EATERY.getZeroBased());
         EditCommand editCommand = new EditCommand(INDEX_FIRST_EATERY,
                 new EditEateryDescriptorBuilder(eateryInList).build());
@@ -93,13 +93,13 @@ public class EditCommandTest {
 
     /**
      * Edit filtered list where index is larger than size of filtered list,
-     * but smaller than size of address book
+     * but smaller than size of eatery list
      */
     @Test
     public void execute_invalidEateryIndexFilteredList_failure() {
         showEateryAtIndex(model, INDEX_FIRST_EATERY);
         Index outOfBoundIndex = INDEX_SECOND_EATERY;
-        // ensures that outOfBoundIndex is still in bounds of address book list
+        // ensures that outOfBoundIndex is still in bounds of eatery list
         assertTrue(outOfBoundIndex.getZeroBased() < model.getEateryList().getEateryList().size());
 
         EditCommand editCommand = new EditCommand(outOfBoundIndex,

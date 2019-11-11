@@ -37,7 +37,7 @@ public class ReviewCommandTest {
         showEateryAtIndex(model, INDEX_FIRST_EATERY);
 
         Index outOfBoundIndex = INDEX_SECOND_EATERY;
-        // ensures that outOfBoundIndex is still in bounds of address book list
+        // ensures that outOfBoundIndex is still in bounds of eatery list
         assertTrue(outOfBoundIndex.getZeroBased() < model.getEateryList().getEateryList().size());
 
         ReviewCommand reviewCommand = new ReviewCommand(outOfBoundIndex, REVIEW_2);

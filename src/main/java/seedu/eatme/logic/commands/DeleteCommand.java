@@ -11,7 +11,7 @@ import seedu.eatme.model.Model;
 import seedu.eatme.model.eatery.Eatery;
 
 /**
- * Deletes a eatery identified using it's displayed index from the address book.
+ * Deletes a eatery identified using it's displayed index from the eatery list.
  */
 public class DeleteCommand extends Command {
 

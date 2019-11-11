@@ -11,7 +11,7 @@ import seedu.eatme.model.Model;
 import seedu.eatme.model.eatery.EateryAttributesContainsKeywordsPredicate;
 
 /**
- * Finds and lists all eateries in address book whose name contains any of the argument keywords.
+ * Finds and lists all eateries in eatery list whose name contains any of the argument keywords.
  * Keyword matching is case insensitive.
  */
 public class FindCommand extends Command {

@@ -17,7 +17,7 @@ import seedu.eatme.model.eatery.Tag;
 
 
 /**
- * Deletes a eatery identified using it's displayed index from the address book.
+ * Deletes a eatery identified using it's displayed index from the eatery list.
  */
 public class SaveTodoCommand extends Command {
 

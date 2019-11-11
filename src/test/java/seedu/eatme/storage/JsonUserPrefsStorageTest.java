@@ -73,7 +73,7 @@ public class JsonUserPrefsStorageTest {
     private UserPrefs getTypicalUserPrefs() {
         UserPrefs userPrefs = new UserPrefs();
         userPrefs.setGuiSettings(new GuiSettings(1000, 500, 300, 100));
-        userPrefs.setEateryListFilePath(Paths.get("eatme.json"));
+        userPrefs.setEateryListFilePath(Paths.get("eatMe.json"));
         return userPrefs;
     }
 

@@ -21,7 +21,7 @@ import seedu.eatme.model.eatery.Eatery;
 import seedu.eatme.testutil.EateryBuilder;
 
 /**
- * Contains integration tests (interaction with the Model, UndoCommand and RedoCommand) and unit tests for
+ * Contains integration tests (interaction with the Model) and unit tests for
  * {@code CloseCommand}.
  */
 public class CloseCommandTest {

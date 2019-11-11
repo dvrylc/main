@@ -6,7 +6,7 @@ import static seedu.eatme.model.Model.PREDICATE_SHOW_ALL_EATERIES;
 import seedu.eatme.model.Model;
 
 /**
- * Lists all persons in the eatery list to the user.
+ * Toggles between main and todo mode.
  */
 public class ModeCommand extends Command {
 

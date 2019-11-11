@@ -99,7 +99,6 @@ public class FeedList implements ReadOnlyFeedList {
     @Override
     public String toString() {
         return feeds.asUnmodifiableObservableList().size() + " feeds";
-        // TODO: refine later
     }
 
     @Override

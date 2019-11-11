@@ -74,7 +74,7 @@ It is important that there is a visual indicator for the user to tell that the e
 ** Project management:
 *** Managed releases `v1.1` - `v1.4` (4 releases) on GitHub
 ** Enhancements to existing features:
-*** Updated the GUI color scheme (PR https://github.com/AY1920S1-CS2103T-W11-3/main/pull/63[#63])
+*** Updated the GUI layout and color scheme (PR https://github.com/AY1920S1-CS2103T-W11-3/main/pull/63[#63])
 *** Updated the `find` command to allow for attribute-based finding (PR https://github.com/AY1920S1-CS2103T-W11-3/main/pull/168[#168])
 ** Documentation:
 *** Updated the User Guide with new information (PRs https://github.com/AY1920S1-CS2103T-W11-3/main/pull/91[#91], https://github.com/AY1920S1-CS2103T-W11-3/main/pull/115[#115], https://github.com/AY1920S1-CS2103T-W11-3/main/pull/118[#118], https://github.com/AY1920S1-CS2103T-W11-3/main/pull/176[#176])
@@ -92,7 +92,7 @@ It is important that there is a visual indicator for the user to tell that the e
 |_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
 |===
 
-include::../UserGuide.adoc[tag=newsfeed]
+include::../UserGuide.adoc[tag=newsFeed]
 
 include::../UserGuide.adoc[tag=show]
 
